@@ -1,4 +1,4 @@
-# Projektidee 1  
+# Projektidee  
 ## Ausgangslage:  
 Ich ernähre mich seit einiger Zeit nach dem "Intermittend Fasting" Konzept. Dabei handelt es sich um eine Ernährungs- bzw. Diät-Form, bei der je nach Plan eine gewisse Zeit lang gefastet wird. Es gibt dabei folgende sechs bekannte Methoden:  
 1. *The 5/2 Diet*: Zwei Tage pro Woche fasten, an den anderen Tagen normal essen. Während den Fasten-Tagen sind bei Männern 600 kcal erlaubt, bei Frauen 500 kcal.  
