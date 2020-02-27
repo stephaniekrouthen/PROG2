@@ -16,20 +16,22 @@ Diese Applikation soll einen bei dieser Ernährungsform zu untersützen und die 
 ## Workflow:  
 **Dateieingabe:**  
 Auswahl, ob man einen neuen Plan erstellen möchte (1.) oder Informationen zum aktuellen Plan einsehen möchte (2.):  
-    1. neuer Plan erstellen:  
-    * Auswahl zwischen den 6 Plänen  
-    * Auswahl auf wann die Fastenzeiten fallen sollen (Tages- sowie Zeitabhängig)  
-    * Auswahl, was mit dem erstellten Plan passieren soll (Liste oder Tabelle)    
-    2. aktueller Plan einsehen:  
-    * Auswahl, was man mit der Tabelle machen möchte (ausdrucken, per Mail senden, abspeichern)  
-    * Bei der 5/2 Diet können Rezepte ausgewählt werden, die für diese Fastenart empfohlen sind, um diese dem aktuellen "Fastentag" hinzuzufügen.  
+1. neuer Plan erstellen:
+    1. Auswahl zwischen den 6 Plänen
+    2. Auswahl auf wann die Fastenzeiten fallen sollen (Tages- sowie Zeitabhängig)
+    3. Auswahl, was mit dem erstellten Plan passieren soll (Liste oder Tabelle) 
+2. aktueller Plan einsehen:
+    1. Auswahl, was man mit der Tabelle machen möchte (ausdrucken, per Mail senden, abspeichern)
+    2. Bei der 5/2 Diet können Rezepte ausgewählt werden, die für diese Fastenart empfohlen sind, um diese dem aktuellen "Fastentag" hinzuzufügen.  
+    
 **Datenverarbeitung/Speicherung:**  
 * ausgewählte Fastenzeiten speichern und in der gewählten Form (Liste oder Tabelle) formatieren
-* bei der 5/2 Diet die kcal der Rezepte zusammenrechnen die an zu den Fastentagen hinzugefügt worden sind, Daten formatieren   
+* bei der 5/2 Diet die kcal der Rezepte zusammenrechnen die an zu den Fastentagen hinzugefügt worden sind, Daten formatieren  
+  
 **Datenausgabe:**  
-    1. neuer Plan erstellen:  
-    * die 6 Pläne inkl. kurzer Beschreibung auflisten
-    * Liste oder Tabelle des Plans anzeigen, Daten an Drucker senden oder per Mail an jemanden senden.
-    2. aktueller Plan einsehen:  
-    * Tabelle bzw. Liste anzeigen, ausdrucken, abspeichern oder versenden
-    * Kalorienbilanz bei 5/2 Diät anzeigen 
+1. neuer Plan erstellen:  
+    1. die 6 Pläne inkl. kurzer Beschreibung auflisten
+    2. Liste oder Tabelle des Plans anzeigen, Daten an Drucker senden oder per Mail an jemanden senden.
+2. aktueller Plan einsehen:  
+    1. Tabelle bzw. Liste anzeigen, ausdrucken, abspeichern oder versenden
+    2. Kalorienbilanz bei 5/2 Diät anzeigen 
