@@ -1,6 +1,6 @@
 # Projektidee  
 ## Ausgangslage:  
-Ich ernähre mich seit einiger Zeit nach dem "Intermittend Fasting" Konzept. Dabei handelt es sich um eine Ernährungs- bzw. Diät-Form, bei der je nach Plan eine gewisse Zeit lang gefastet wird. Eine der geläufigsten Mehtoden ist folgende:  
+Ich ernähre mich seit einiger Zeit nach dem "Intermittent Fasting" Konzept. Dabei handelt es sich um eine Ernährungs- bzw. Diät-Form, bei der je nach Plan eine gewisse Zeit lang gefastet wird. Eine der geläufigsten Methoden ist folgende.  
 *The 5/2 Diet*: Zwei Tage pro Woche wird gefastet, an den anderen Tagen darf normal gegessen werden. Während den Fasten-Tagen sind bei Männern 600 kcal erlaubt, bei Frauen 500 kcal.  
     
 ![Bild 1](intermittent_fasting.png)  Quelle: https://www.cnet.com/how-to/intermittent-fasting-extended-fasts-and-more-how-to-safely-follow-a-fasting-diet/
@@ -12,9 +12,9 @@ Mit dieser Applikation wird es also einfach, auf einen Blick zu sehen, wieviel m
   
 ## Workflow:  
 **Dateieingabe:**
-* Es können Rezepte oder einzelne wenige Lebensmittel ausgewählt werden, die für diese Fastenart empfohlen sind, um diese dem aktuellen Fastentag hinzuzufügen.
+* Es können Rezepte oder einzelne wenige Lebensmittel ausgewählt werden, um diese dem aktuellen Fastentag hinzuzufügen.
 * eigenes Rezept inkl. Kalorien-Anzahl hinzufügen
-* Auswahl ob die Rezepte zur einfacheren Zubereitug ausgedruckt werden sollen
+* Auswahl, ob die Rezepte zur einfacheren Zubereitung ausgedruckt werden sollen
 * Lieblingsrezepte markieren
     
 **Datenverarbeitung/Speicherung:**
