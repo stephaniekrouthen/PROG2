@@ -1,39 +1,29 @@
 # Projektidee  
 ## Ausgangslage:  
-Ich ernähre mich seit einiger Zeit nach dem "Intermittend Fasting" Konzept. Dabei handelt es sich um eine Ernährungs- bzw. Diät-Form, bei der je nach Plan eine gewisse Zeit lang gefastet wird. Es gibt dabei folgende sechs bekannte Methoden:  
-1. *The 5/2 Diet*: Zwei Tage pro Woche fasten, an den anderen Tagen normal essen. Während den Fasten-Tagen sind bei Männern 600 kcal erlaubt, bei Frauen 500 kcal.  
-2. *16:8 Methode*: 16 Stunden fasten und in den folgenden 8 Stunden werden die Mahlzeiten zu sich genommen.   
-3. *20:4 Methode*: 20h fasten, während 4h essen    
-4. *Eat-Stop-Eat*: ein oder zwei mal in der Woche einen ganzen Tag komplett fasten  
-5. *Alternate-day fasting*: jeden zweiten Tag komplett fasten  
-6. *The Warrior Diet*: den ganzen Tag fasten, ausser rohes Gemüse und Früchte sind erlaubt; am Abend eine grosse Mahlzeit zu sich nehmen  
-  
-![Bild 1](intermittent_fasting.jpg)  
+Ich ernähre mich seit einiger Zeit nach dem "Intermittend Fasting" Konzept. Dabei handelt es sich um eine Ernährungs- bzw. Diät-Form, bei der je nach Plan eine gewisse Zeit lang gefastet wird. Eine der geläufigsten Mehtoden ist folgende:  
+*The 5/2 Diet*: Zwei Tage pro Woche wird gefastet, an den anderen Tagen darf normal gegessen werden. Während den Fasten-Tagen sind bei Männern 600 kcal erlaubt, bei Frauen 500 kcal.  
+    
+![Bild 1](intermittent_fasting.png)  Quelle: https://www.cnet.com/how-to/intermittent-fasting-extended-fasts-and-more-how-to-safely-follow-a-fasting-diet/
   
 ## Funktion/Projektidee:  
-Diese Applikation soll einen bei dieser Ernährungsform zu untersützen und die Zeiten bzw. Kalorieneinnahme besser im Blick zuhaben. Es soll die Möglichkeit geben, auszuwählen ob man einen neuen Plan erstellen möchte oder Infos zum aktuellen Plan zu erhalten.  
-1. Man muss auswählen, welchen Plan man verfolgen möchte, um sich danach die Fasten-Tage und Zeiten zu überlegen und festzuhalten.  
-2. Ebenfalls soll es die Applikation ermöglichen, Infos darüber zu erhalten, bis wann man noch fasten muss bzw. wann man wieder essen darf. Bzw. wenn man die 5/2 Diet wählt, soll die Applikation ausrechnen, wie viele Kalorien man am heutigen Tag noch zu sich nehmen darf.   
-
-## Workflow:  
-**Dateieingabe:**  
-Auswahl, ob man einen neuen Plan erstellen möchte (1.) oder Informationen zum aktuellen Plan einsehen möchte (2.):  
-1. neuer Plan erstellen:
-    1. Auswahl zwischen den 6 Plänen
-    2. Auswahl auf wann die Fastenzeiten fallen sollen (Tages- sowie Zeitabhängig)
-    3. Auswahl, was mit dem erstellten Plan passieren soll (Liste oder Tabelle) 
-2. aktueller Plan einsehen:
-    1. Auswahl, was man mit der Tabelle machen möchte (ausdrucken, per Mail senden, abspeichern)
-    2. Bei der 5/2 Diet können Rezepte ausgewählt werden, die für diese Fastenart empfohlen sind, um diese dem aktuellen "Fastentag" hinzuzufügen.  
-    
-**Datenverarbeitung/Speicherung:**  
-* ausgewählte Fastenzeiten speichern und in der gewählten Form (Liste oder Tabelle) formatieren
-* bei der 5/2 Diet die kcal der Rezepte zusammenrechnen die an zu den Fastentagen hinzugefügt worden sind, Daten formatieren  
+Diese Applikation soll einen bei dieser Ernährungsform untersützen, um die Kalorieneinnahme besser im Blick zuhaben.  
+Eine Datenbank anzulegen, bei der die ganzen Kcal-Angaben aller Lebensmittel aufgeführt sind, würde den Ramen dieses Projektes sprengen. Deshalb wird es die Möglichkeit geben, aus vordefinierten und empfohlenen Rezepten auswählen können bzw. auch eigene Rezepte hinzuzufügen. Da die Kalorienangaben der Rezepte abgespeichert sind, werden diese beim Hinzufügen zum aktuellen Fastentag der aktuellen Kalorienbilanz hinzugerechnet. Ebenfalls gibt es aber auch einige wenige Lebensmittel die hinzugefügt werden können (Früchte, Getränkte etc.).  
+Mit dieser Applikation wird es also einfach, auf einen Blick zu sehen, wieviel man heute noch essen darf, um die 500 bzw. 600 kcal nicht zu übersteigen.
   
-**Datenausgabe:**  
-1. neuer Plan erstellen:  
-    1. die 6 Pläne inkl. kurzer Beschreibung auflisten
-    2. Liste oder Tabelle des Plans anzeigen, Daten an Drucker senden oder per Mail an jemanden senden.
-2. aktueller Plan einsehen:  
-    1. Tabelle bzw. Liste anzeigen, ausdrucken, abspeichern oder versenden
-    2. Kalorienbilanz bei 5/2 Diät anzeigen 
+## Workflow:  
+**Dateieingabe:**
+* Es können Rezepte oder einzelne wenige Lebensmittel ausgewählt werden, die für diese Fastenart empfohlen sind, um diese dem aktuellen Fastentag hinzuzufügen.
+* eigenes Rezept inkl. Kalorien-Anzahl hinzufügen
+* Auswahl ob die Rezepte zur einfacheren Zubereitug ausgedruckt werden sollen
+* Lieblingsrezepte markieren
+    
+**Datenverarbeitung/Speicherung:**
+* kcal der Rezepte zusammenrechnen, die zu den Fastentagen hinzugefügt worden sind
+* Summe formatiert anzeigen
+* neues Rezept abspeichern und formatieren
+  
+**Datenausgabe:**
+* Kalorienbilanz anzeigen
+* Rezepte ausdrucken
+* Liste der Lieblingsrezepte anzeigen
+
