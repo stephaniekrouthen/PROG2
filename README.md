@@ -8,7 +8,7 @@ Ich ernähre mich seit einiger Zeit nach dem "Intermittend Fasting" Konzept. Dab
 5. *Alternate-day fasting*: jeden zweiten Tag komplett fasten  
 6. *The Warrior Diet*: den ganzen Tag fasten, ausser rohes Gemüse und Früchte sind erlaubt; am Abend eine grosse Mahlzeit zu sich nehmen  
 
-![Bild 1](intermittent_fasting.jpg "Header")
+![Bild 1](bild/intermittent_fasting.jpg "Header")
 
 ## Funktion/Projektidee:  
 Diese Applikation soll einen bei dieser Ernährungsform zu untersützen und die Zeiten bzw. Kalorieneinnahme besser im Blick zuhaben. Es soll die Möglichkeit geben, auszuwählen ob man einen neuen Plan erstellen möchte oder Infos zum aktuellen Plan zu erhalten.  
