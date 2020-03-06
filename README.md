@@ -14,16 +14,19 @@ Mit dieser Applikation wird es also einfach, auf einen Blick zu sehen, wieviel m
 **Dateieingabe:**
 * Es können Rezepte oder einzelne wenige Lebensmittel ausgewählt werden, um diese dem aktuellen Fastentag hinzuzufügen.
 * eigenes Rezept inkl. Kalorien-Anzahl hinzufügen
-* Auswahl, ob die Rezepte zur einfacheren Zubereitung ausgedruckt werden sollen
-* Lieblingsrezepte markieren
+* Auswahl, ob die Rezepte zur einfacheren Zubereitung ausgedruckt werden sollen (optional)
+* Lieblingsrezepte markieren (optional)
+* Gewichtangabe (optional)
     
 **Datenverarbeitung/Speicherung:**
 * kcal der Rezepte zusammenrechnen, die zu den Fastentagen hinzugefügt worden sind
 * Summe formatiert anzeigen
 * neues Rezept abspeichern und formatieren
+* Gewichtangabe speichern (ooptional)
   
 **Datenausgabe:**
-* Kalorienbilanz anzeigen
-* Rezepte ausdrucken
-* Liste der Lieblingsrezepte anzeigen
+* tägliche Kalorienbilanz anzeigen (wöchentlich und monatlich optional) 
+* Gewichtverlauf (optional)
+* Rezepte ausdrucken (optional)
+* Liste der Lieblingsrezepte anzeigen (optional)
 
