@@ -1,0 +1,87 @@
+/*Allgemein*/
+
+body {font-family: Abdabi Extra Light, Geneva, sans-serif; font-size: 16px; color: darkslategrey;}
+
+h1{text-align:center; color: white; font-size:30px; font-weight: 400; text-transform: uppercase; background-color: hsla(0, 0%, 10%, 0.7); position: absolute; z-index: 1; width: 400px; top: 40%; left: 50%; margin-left: -200px;}
+
+h2{color: white; font-size: 25px; font-weight: 300; background-color: hsla(0, 0%, 20%, 0.7); position: absolute; z-index: 1; width: 680px; top: 50%; left: 50%; margin-left: -340px;}
+
+h3{width: auto; color:darkslategrey; text-transform: uppercase; font-size: 18px; padding-bottom: 1%; padding-top: 3%; border-bottom: 2px; border-bottom-style: solid; border-bottom-color: darkslategrey; text-align: left; margin-bottom: 2%; margin-top: 8%;}
+
+h4 {text-align: left; color:darkslategrey; font-size: 16px; margin-bottom: 0.5%;}
+
+hr{border-color:darkslategrey;}
+
+a {text-decoration: none; color: darkslategrey;}
+
+a:hover {text-decoration: underline;}
+
+ul {list-style-type: none;}
+
+iframe { width: 560px; height: 240px; padding-top: 2%;}
+
+
+/*Header*/
+
+#header {position: relative; width: 100%;}
+#header img {display: block; z-index: 0;}
+
+
+/*Menu*/
+
+#menu {position: absolute; top: 52.7%; z-index: 1; width: 99.2%; float: left}
+
+#menu::after {content: ""; display: table; clear: both;}
+
+#menu ul {text-align: center; font-weight: 800; list-style-type: none; background-color: hsla(0, 0%, 20%, 0.7); }
+
+#menu li {display: inline-block; position: relative; margin-right: 4%; padding-top: 2%; padding-bottom: 2%; text-align: center; width:auto;}
+
+#nav {text-decoration: none; display: block; color: white; font-size: 18px; text-transform: uppercase;}
+
+#nav:hover {color: white; }
+
+#nav::before {background-color: white; content: ""; display: block; height: 5px; width: 0%; position: absolute; top: 0; transition: all ease-in-out 250ms}
+
+#nav:hover::before {width: 100%;}
+
+
+/*Sidebar*/
+
+#sidebar {width: 25%; font-size: 16px; position: absolute; top: 36%; margin-left: 6%; z-index: 2;}
+
+#portrait {border: 7px; border-style: solid; border-color: azure;}
+
+#sidebar table {margin-bottom: 25%;}
+
+#sidebar td { width: auto; background-color: dimgrey; color: azure; font-weight: 300; padding: 3.5%;}
+
+#sidebar a{color: azure;}
+
+
+/*Content*/
+
+#content {width: 55%; text-align: left; padding-left: 3%; border-left: 1px; border-left-style: solid; border-left-color: darkslategrey; margin-left: 30%; margin-bottom: 8%; padding-right: 6%;}
+
+#content td {width: 10%; border-bottom: 0.5px; border-bottom-style: solid; border-bottom-color: darkslategrey;}
+
+#content th {border-bottom: 1px; border-bottom-style: solid; border-bottom-color: darkslategrey;}
+
+#content img {width: 100%;}
+
+#content a {text-decoration: none; color: darkslategrey; font-size: 14px;}
+
+#content a:hover {text-decoration: underline;}
+
+#content ul {padding-left: 0;}
+
+#to-top {z-index: 99; position: fixed; right: 3%; bottom: 3%; width: 1px;}
+
+
+/*Footer*/
+
+#footer {font-size: 14px; text-align: center; position: relative; bottom: 0; width: 99%; background-color: dimgrey; padding: 0.5%; color: azure; margin-top: 5%;}
+
+#footer a {color: white;}
+
+#footer i {font-size: 32px; padding-bottom: 1.5%;}
