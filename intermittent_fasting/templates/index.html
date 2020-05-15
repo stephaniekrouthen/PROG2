@@ -2,38 +2,32 @@
 <html lang="de">
 	<head>
 		<meta charset="utf-8">
-		<title>Intermittend Fasting</title>
-		<link rel="stylesheet" href="../static/main.css" type ="text/css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<title>Fasten-Assistent</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 	</head>
 	<body>
-		<a href="{{ url_for('test')}}">Test</a>
 		<div id="header">
-    		<img src="../italian-cuisine.jpg" alt="Header-Foto" width= 100%>
-     		<h1>Hallo {{ name }}!</h1>
-     		<h2>Willkommen zu deinem persönlichen Fasten-Assistenten!</h2>
+    		<img src="{{url_for('static', filename='italian-cuisine.jpg')}}" alt="Header-Foto" width= 100%>
+    		<div id="header1">
+     			<p>Hallo {{ name }}</p>
+     		</div>
+     		<div id="header2">
+     			<p>Willkommen zu deinem persönlichen Fasten-Assistenten!</p>
+     		</div>
      	</div>
 <div id="menu">
     <ul>
         <li><a id="nav" href="kalorienbilanz.html">Kalorienbilanz</a></li>
-        <li><a id="nav" href="mahlzeit_hinzufuegen.html">Mahlzeit hinterlegen</a></li>
+        <li><a id="nav" href="rezepte.html">Rezept Übersicht</a></li>
         <li><a id="nav" href="neues_rezept.html">neues Rezept</a></li>
     </ul>
     <br>
 </div>
 <div id="content">
     <p class="1">
-        <h3>Intermittend Fasting mit der 5:2 Methode</h3>
+        <h1>Intermittend Fasting mit der 5:2 Methode</h1>
         "An fünf von sieben Tagen darf man sich ohne Verzicht gesund und ausgewogen ernähren – auch ein Stück Schokolade oder der Burger wären hier erlaubt. An den zwei anderen Tagen ist dann striktes Fasten angesagt. Komplett auf Essen muss an den Fastentagen jedoch nicht verzichtet werden: Frauen sollten an diesen Fastentagen nicht mehr als 500 Kalorien und Männer nicht mehr als 600 Kalorien zu sich nehmen. Kohlenhydratreiche Nahrungsmittel wie Brot, Pasta, Reis oder Kartoffeln sowie zuckerhaltige Snacks und Alkohol sind an den beiden Fastentagen daher keine gute Strategie – sie halten einfach nicht lange satt und liefern zu viel Kalorien. Dafür stehen viel Gemüse, etwas Obst, eine gute Portion Eiweiß, gesunde Fette und reichlich Wasser, Gemüsebrühe sowie ungesüßter Tee auf dem Speiseplan. Die beiden Fastentage sollten bestenfalls nicht aufeinander folgen und jede Woche fest etabliert sein, beispielsweise an einem Montag und Donnerstag. Die Wochenenden sind eher nicht zu empfehlen, da sich die Abbruchrate dadurch häufig erhöht." 
         <br><a href="https://www.fitforfun.de/abnehmen/diaeten/52-diaet-rezept-schlank-mit-der-52-diaet-237902.html">Quelle: fitforfun.de</a>
    
     <p/>
 </div>
-
-<div id="footer">
-    <p class="2">
-        <a href="mailto:stephanie.krouthen@gmail.com">send me an E-Mail</a>
-    </p>    
-</div>
-	</body>
-</html>

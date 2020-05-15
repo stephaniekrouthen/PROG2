@@ -25,15 +25,8 @@
 </div>
 <div id="content">
     <p class="1">
-        <h1>Füge ein neues Rezept zur Datenbank hinzu</h1>
-        <form method="POST">
-            <input type="text" name="titel" placeholder="Rezepttitel"><br>
-            <input type="text" name="zutaten" placeholder="Zutaten"><br>
-            <input size="50" type="text" name="zubereitung" placeholder="Zubereitung"><br>
-            <input type="text" name="kcal" placeholder="Anzahl Kalorien"><br>
-            <button type="submit">Senden</button>
-            <p>{{ bestätigung_rezept }}</p>
-        </form>
+        <h1>Sieh dir alle Rezepte in der Datenbank an</h1>
+        {{ rezepte_liste }}
    
     <p/>
 </div>
