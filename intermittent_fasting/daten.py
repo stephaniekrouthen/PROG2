@@ -87,3 +87,5 @@ def mahlzeiten_laden():
     with open(datei, "w") as open_file:
         json.dump(datei_inhalt, open_file)
 
+
+

@@ -4,35 +4,11 @@ from flask import request
 import daten
 import pandas as pd
 import plotly.graph_objects as go
-from plotly.offline import plot
+
 
 app = Flask("Intermittent Fasting")
 
 """
-def data():
-	mahlzeiten = daten.mahlzeiten_laden()
-	kalorien_bilanz = 0
-	for kcal in mahlzeiten.values():
-		kcal = int(kcal)
-		kalorien_bilanz += kcal
-	verbraucht = (100/500)*kalorien_bilanz
-	verfuegbar = 100 - verbraucht
-	colors = ['mediumturquoise', 'lightgreen']
-	labels = ['verbraucht', 'verfügbar']
-	values = [verbraucht, verfuegbar]
-
-	fig = go.Figure(data=[go.Pie(labels=labels, values=values)])
-	fig.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=20, marker=dict(colors=colors, line=dict(color='#000000', width=2)))
-
-	div = plot(fig, output_type="div")
-	return div
-
-@app.route("/")
-def index():
-	div = viz()
-	return render_template("index.html", viz_div=div)
-"""
-
 @app.route('/hello/plotly')
 def plotly():
 	mahlzeiten = daten.mahlzeiten_laden()
@@ -46,9 +22,11 @@ def plotly():
 	labels = ['verbraucht', 'verfügbar']
 	values = [verbraucht, verfuegbar]
 
-	fig = go.Figure(data=[go.Pie(labels=labels, values=values)])
+	fig = go.Figure(data=[go.Pie(labels=labels, values=values, hole= 0.9)])
 	fig.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=20, marker=dict(colors=colors, line=dict(color='#000000', width=2)))
 	fig.show()
+	return render_template('kalorienbilanz.html')
+"""
 
 
 @app.route('/hello/')
@@ -88,21 +66,37 @@ def mahlzeiten_speichern():
 		bestätigung_mahlzeit = "Die Mahlzeit " + rezept_titel + " wurde erfolgreich zu deinem Fastentag hinzugefügt!"
 		rezept_titel, kalorien = daten.mahlzeiten_speichern(rezept_titel, kalorien)
 		mahlzeiten = daten.mahlzeiten_laden()
-
-		kalorienbilanz = 0
+		kcal_verbraucht = 0
 		for kcal in mahlzeiten.values():
 			kcal = int(kcal)
-			kalorienbilanz += kcal
-		return render_template('kalorienbilanz.html', bestätigung_mahlzeit=bestätigung_mahlzeit, kalorienbilanz=kalorienbilanz,)
-
+			kcal_verbraucht += kcal
+		kcal_verbraucht_str = "Du hast heute bereits " + str(kcal_verbraucht) + " gegessen."
+		kcal_verfuegbar = 500-kcal_verbraucht
+		kcal_verfuegbar_str = "Das heisst, du hast noch " + str(kcal_verfuegbar) + " Kalorien verfügbar heute."
+		if kcal_verfuegbar <= 0:
+			kcal_ueberschritten = "Das heist, du hast heute deinen Kalorienbedarf um " + str(kcal_verfuegbar) + " überschritten!"
+			kcal_verfuegbar = kcal_ueberschritten
+			return render_template('kalorienbilanz.html', kcal_ueberschritten=kcal_ueberschritten, kcal_verfuegbar=False, bestätigung_mahlzeit=bestätigung_mahlzeit, kcal_verbraucht_str=kcal_verbraucht_str)
+		return render_template('kalorienbilanz.html', bestätigung_mahlzeit=bestätigung_mahlzeit, kcal_verbraucht_str=kcal_verbraucht_str, kcal_verfuegbar_str=kcal_verfuegbar_str)
 	return render_template('kalorienbilanz.html')
-
 
 
 @app.route('/hello/rezepte.html')
 def uebersicht():
     rezepte = daten.rezepte_laden()
+    rezepte_liste = ""
+    for key, value in rezepte.items():
+    	titel = key + " // "
+    	zutaten = rezepte[key]["zutaten"]
+    	zubereitung = rezepte[key]["zubereitung"]
+    	kcal = rezepte[key]["kcal"]
+    	rezepte_liste += titel + " Zutaten: " + zutaten + " // Zubereitung: " + zubereitung + " // Anzahl Kalorien: " + kcal + " //// \n"
+    	
+    return render_template('rezepte.html', rezepte_liste=rezepte_liste)
 
+
+
+"""
     rezepte_liste = ""
     for key, value in rezepte.items():
     	titel = key + " - "
@@ -115,12 +109,12 @@ def uebersicht():
     return render_template('rezepte.html', rezepte_liste=rezepte_liste)
 
 
-"""
+
 @app.route('/pandas/')
-def data():
+def pandas():
 	data = daten.rezepte_laden()
-	data_df = pd.DataFrame(data)
-	return print(data)
+	data_df = pd.DataFrame(data, colums=[key, value])
+	return print(data_df)
 
 
 

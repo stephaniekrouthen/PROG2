@@ -33,9 +33,8 @@
         </form>
         <p>{{ bestätigung_mahlzeit }}</p>
         <h1>Deine persönliche Kalorienbilanz</h1>
-        <p>{{ kalorienbilanz }}</p>
-        <p>{{ viz_div|safe }}</p>
-        <a href="http://localhost:5000/hello/plotly">Kalorienbilanz Grafik</a>
-    
+        {{ kcal_verbraucht_str }}<br>
+        {{ kcal_verfuegbar_str }}<br>
+        {{ kcal_ueberschritten }}<br><br>    
     <p/>
 </div>
