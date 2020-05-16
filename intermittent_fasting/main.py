@@ -3,8 +3,53 @@ from flask import render_template
 from flask import request
 import daten
 import pandas as pd
+import plotly.graph_objects as go
+from plotly.offline import plot
 
 app = Flask("Intermittent Fasting")
+
+"""
+def data():
+	mahlzeiten = daten.mahlzeiten_laden()
+	kalorien_bilanz = 0
+	for kcal in mahlzeiten.values():
+		kcal = int(kcal)
+		kalorien_bilanz += kcal
+	verbraucht = (100/500)*kalorien_bilanz
+	verfuegbar = 100 - verbraucht
+	colors = ['mediumturquoise', 'lightgreen']
+	labels = ['verbraucht', 'verfügbar']
+	values = [verbraucht, verfuegbar]
+
+	fig = go.Figure(data=[go.Pie(labels=labels, values=values)])
+	fig.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=20, marker=dict(colors=colors, line=dict(color='#000000', width=2)))
+
+	div = plot(fig, output_type="div")
+	return div
+
+@app.route("/")
+def index():
+	div = viz()
+	return render_template("index.html", viz_div=div)
+"""
+
+@app.route('/hello/plotly')
+def plotly():
+	mahlzeiten = daten.mahlzeiten_laden()
+	kalorien_bilanz = 0
+	for kcal in mahlzeiten.values():
+		kcal = int(kcal)
+		kalorien_bilanz += kcal
+	verbraucht = (100/500)*kalorien_bilanz
+	verfuegbar = 100 - verbraucht
+	colors = ['mediumturquoise', 'lightgreen']
+	labels = ['verbraucht', 'verfügbar']
+	values = [verbraucht, verfuegbar]
+
+	fig = go.Figure(data=[go.Pie(labels=labels, values=values)])
+	fig.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=20, marker=dict(colors=colors, line=dict(color='#000000', width=2)))
+	fig.show()
+
 
 @app.route('/hello/')
 def hello():
@@ -17,6 +62,7 @@ def hello_persoenlich(name=False):
 		name = daten.namen_speichern(name)
 	else:
 		return render_template('index.html')
+
 
 @app.route('/hello/neues_rezept.html', methods=["GET", "POST"])
 def rezept_speichern():
@@ -47,7 +93,7 @@ def mahlzeiten_speichern():
 		for kcal in mahlzeiten.values():
 			kcal = int(kcal)
 			kalorienbilanz += kcal
-		return render_template('kalorienbilanz.html', bestätigung_mahlzeit=bestätigung_mahlzeit, kalorienbilanz=kalorienbilanz, )
+		return render_template('kalorienbilanz.html', bestätigung_mahlzeit=bestätigung_mahlzeit, kalorienbilanz=kalorienbilanz,)
 
 	return render_template('kalorienbilanz.html')
 
@@ -62,7 +108,7 @@ def uebersicht():
     	titel = key + " - "
     	rezepte_liste += titel
     	for key, value in rezepte[key].items():
-        	zeile = str(key) + ": " + str(value) + "\n"
+        	zeile = str(key) + ": " + str(value)
         	rezepte_liste += zeile
 
 
@@ -110,10 +156,11 @@ if __name__ == "__main__":
 	return render_template('neues_rezept.html')
 
 
-Für mehrere Rezepte, Schleifen?
-Das Dict rezept muss irgendwo abgespeichert werden, damit es dann im mahlzeit_hinzufügen.html abgerufen werden kann 
-und damit mehrere Dicts erstellt werden können.
-rekursive funktion
+name abspeichern, dass immer Hallo name kommt -> json
+Rezept Übersicht schön darstellen
+kalorienbilanz -> pro Nutzer eine eigene Bilanz
+Grafik -> im HTML integrieren
+
 """
 
 
