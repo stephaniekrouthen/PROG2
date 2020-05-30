@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>Fasten-Assistent</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+    <body>
+        <div id="header">
+            <img src="{{url_for('static', filename='italian-cuisine.jpg')}}" alt="Header-Foto" width= 100%>
+            <div id="header1">
+                <p>Hallo {{ name }}</p>
+            </div>
+            <div id="header2">
+                <p>Willkommen zu deinem persönlichen Fasten-Assistenten!</p>
+            </div>
+        </div>
+<div id="menu">
+    <ul>
+        <li><a id="nav" href="kalorienbilanz.html">Kalorienbilanz</a></li>
+        <li><a id="nav" href="rezepte.html">Rezept Übersicht</a></li>
+        <li><a id="nav" href="neues_rezept.html">neues Rezept</a></li>
+    </ul>
+    <br>
+</div>
+<div id="content">
+    <p class="1">
+        <h1>Füge ein Mahlzeit zu deinem Fastentag hinzu</h1>
+        Einfach auf das Rezept klicken und es wird zu deinem heutigen Fastentag hinzugefügt!. <br><br>
+        Möchtest du wissen, wieviele Kalorien du heute schon gegessen hast und wie viele du noch essen kannst, 
+        bevor du dein Kontigent aufgebraucht hast? Gehe einfach auf "Kalorienbilanz". <br><br>
+        {{ rezepte_liste }}
+   
+    <p/>
+</div>
