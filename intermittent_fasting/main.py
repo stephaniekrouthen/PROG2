@@ -80,23 +80,24 @@ def mahlzeiten_speichern():
 		return render_template('kalorienbilanz.html', bestätigung_mahlzeit=bestätigung_mahlzeit, kcal_verbraucht_str=kcal_verbraucht_str, kcal_verfuegbar_str=kcal_verfuegbar_str)
 	return render_template('kalorienbilanz.html')
 
-
 @app.route('/hello/rezepte.html')
 def uebersicht():
     rezepte = daten.rezepte_laden()
     rezepte_liste = ""
     for key, value in rezepte.items():
-    	titel = key + " // "
+    	zeichen_laenge = len(key)
+    	binde_striche = "_" * (100-zeichen_laenge)
+    	titel = key + binde_striche
     	zutaten = rezepte[key]["zutaten"]
     	zubereitung = rezepte[key]["zubereitung"]
     	kcal = rezepte[key]["kcal"]
-    	rezepte_liste += titel + " Zutaten: " + zutaten + " // Zubereitung: " + zubereitung + " // Anzahl Kalorien: " + kcal + " //// \n"
+    	rezepte_liste += titel + " Zutaten: " + zutaten + " // Zubereitung: " + zubereitung + " // Anzahl Kalorien: " + kcal + " // "
     	
     return render_template('rezepte.html', rezepte_liste=rezepte_liste)
 
 
-
 """
+
     rezepte_liste = ""
     for key, value in rezepte.items():
     	titel = key + " - "

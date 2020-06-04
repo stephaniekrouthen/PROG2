@@ -87,5 +87,7 @@ def mahlzeiten_laden():
     with open(datei, "w") as open_file:
         json.dump(datei_inhalt, open_file)
 
+def benutzer_speichern(username):
+    datei_name = "mahlzeiten" + username + ".json"
 
 
