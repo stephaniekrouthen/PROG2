@@ -4,6 +4,7 @@ from flask import request
 import daten
 import pandas as pd
 import plotly.graph_objects as go
+from datetime import date
 
 
 app = Flask("Intermittent Fasting")
@@ -61,11 +62,13 @@ def rezept_speichern():
 def mahlzeiten_speichern():
 	if request.method == "POST":
 		rezept_titel = request.form['rezept_titel']
+		username = request.form['username']
 		data = daten.rezepte_laden()
+		tag = date.today()
 		kalorien = data[rezept_titel]["kcal"]
 		bestätigung_mahlzeit = "Die Mahlzeit " + rezept_titel + " wurde erfolgreich zu deinem Fastentag hinzugefügt!"
-		rezept_titel, kalorien = daten.mahlzeiten_speichern(rezept_titel, kalorien)
-		mahlzeiten = daten.mahlzeiten_laden()
+		tag, username, rezept_titel, kalorien = daten.mahlzeiten_speichern(tag, username, rezept_titel, kalorien)
+		mahlzeiten = daten.mahlzeiten_laden(username, tag)
 		kcal_verbraucht = 0
 		for kcal in mahlzeiten.values():
 			kcal = int(kcal)

@@ -60,22 +60,24 @@ def speichern_mahlzeiten(datei, key, value):
 
     datei_inhalt[key] = value 
 
-
-    # print(datei_inhalt)
-
     with open(datei, "w") as open_file:
         json.dump(datei_inhalt, open_file)
 
 
-def mahlzeiten_speichern(rezept_titel, kalorien):
-    datei_name = "mahlzeiten.json"
+def mahlzeiten_speichern(tag, username, rezept_titel, kalorien):
+    datei_name = "mahlzeiten-" + username + "-" + str(tag) + ".json"
+    try:
+        with open(datei_name) as open_file:
+            datei_inhalt = json.load(open_file)
+    except FileNotFoundError:
+        with open(datei_name, "w") as open_file:
+            open_file.write("{}")
     speichern_mahlzeiten(datei_name, rezept_titel, kalorien)
     return  rezept_titel, kalorien
 
 
-def mahlzeiten_laden():
-    datei_name = "mahlzeiten.json"
-
+def mahlzeiten_laden(username, tag):
+    datei_name = "mahlzeiten-" + username + "-" + str(tag) + ".json"
     try:
         with open(datei_name) as open_file:
             datei_inhalt = json.load(open_file)
@@ -87,7 +89,7 @@ def mahlzeiten_laden():
     with open(datei, "w") as open_file:
         json.dump(datei_inhalt, open_file)
 
-def benutzer_speichern(username):
-    datei_name = "mahlzeiten" + username + ".json"
+
+
 
 
