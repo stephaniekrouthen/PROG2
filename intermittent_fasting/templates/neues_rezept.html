@@ -26,14 +26,15 @@
 <div id="content">
     <p class="1">
         <h1>Füge ein neues Rezept zur Datenbank hinzu</h1>
-        Bitte beachte bei der Titelvergabe, dass du dich nur auf ein Wort beschränkst!</br></br>
+        Bei der Titelvergabe solltest du dich nur auf ein Wort beschränken.</br></br>
+        {{ bestätigung_rezept }}
+        {{ fehler_meldung }}</br></br>
         <form method="POST">
             <textarea style="width: 500px;" type="text" name="titel" placeholder="Rezepttitel"></textarea></br>
             <textarea style="width: 500px; height: 50px" rows= "5" type="text" name="zutaten" placeholder="Zutaten"></textarea></br>
             <textarea style="width: 500px;" rows= "12" type="text" name="zubereitung" placeholder="Zubereitung"></textarea></br>
-            <textarea style="width: 500px;" type="text" name="kcal" placeholder="Anzahl Kalorien"></textarea></br>
+            <input style="width: 500px;" type="number" max="500" name="kcal" placeholder="Anzahl Kalorien"></br>
             <button style="width: 100px;"type="submit">Senden</button>
-            <p>{{ bestätigung_rezept }}</p>
         </form>
    
     <p/>
