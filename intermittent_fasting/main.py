@@ -101,8 +101,6 @@ def uebersicht():
     return render_template('rezepte.html', rezepte_liste=rezepte_liste)
 
 
-
-
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
 
