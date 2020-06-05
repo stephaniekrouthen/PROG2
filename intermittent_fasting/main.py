@@ -91,7 +91,7 @@ def uebersicht():
     rezepte_liste = ""
     for key, value in rezepte.items():
     	zeichen_laenge = len(key)
-    	binde_striche = "_" * (100-zeichen_laenge) #damit der Rest der Zeile mit Bindestrichen aufgefüllt wird und der weitere Inhalt auf eine neue Zeile kommt
+    	binde_striche = "_" * (130-zeichen_laenge) #damit der Rest der Zeile mit Bindestrichen aufgefüllt wird und der weitere Inhalt auf eine neue Zeile kommt
     	titel = key + binde_striche
     	zutaten = rezepte[key]["zutaten"]
     	zubereitung = rezepte[key]["zubereitung"]

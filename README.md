@@ -7,26 +7,22 @@ Ich ernähre mich seit einiger Zeit nach dem "Intermittent Fasting" Konzept. Dab
   
 ## Funktion/Projektidee:  
 Diese Applikation soll einen bei dieser Ernährungsform untersützen, um die Kalorieneinnahme besser im Blick zuhaben.  
-Eine Datenbank anzulegen, bei der die ganzen Kcal-Angaben aller Lebensmittel aufgeführt sind, würde den Ramen dieses Projektes sprengen. Deshalb wird es die Möglichkeit geben, aus vordefinierten und empfohlenen Rezepten auswählen können bzw. auch eigene Rezepte hinzuzufügen. Da die Kalorienangaben der Rezepte abgespeichert sind, werden diese beim Hinzufügen zum aktuellen Fastentag der aktuellen Kalorienbilanz hinzugerechnet. Ebenfalls gibt es aber auch einige wenige Lebensmittel die hinzugefügt werden können (Früchte, Getränkte etc.).  
+Eine Datenbank anzulegen, bei der die ganzen Kcal-Angaben aller Lebensmittel aufgeführt sind, würde den Ramen dieses Projektes sprengen. Deshalb wird es die Möglichkeit geben, aus vordefinierten und empfohlenen Rezepten auswählen können bzw. auch eigene Rezepte hinzuzufügen. Da die Kalorienangaben der Rezepte abgespeichert sind, werden diese beim Hinzufügen zum aktuellen Fastentag der aktuellen Kalorienbilanz hinzugerechnet.
 Mit dieser Applikation wird es also einfach, auf einen Blick zu sehen, wieviel man heute noch essen darf, um die 500 bzw. 600 kcal nicht zu übersteigen.
   
 ## Workflow:  
 **Dateieingabe:**
-* Es können Rezepte oder einzelne wenige Lebensmittel ausgewählt werden, um diese dem aktuellen Fastentag hinzuzufügen.
+* Es können Rezepte ausgewählt werden, um diese dem aktuellen Fastentag hinzuzufügen.
 * eigenes Rezept inkl. Kalorien-Anzahl hinzufügen
-* Auswahl, ob die Rezepte zur einfacheren Zubereitung ausgedruckt werden sollen (optional)
-* Lieblingsrezepte markieren (optional)
-* Gewichtangabe (optional)
     
 **Datenverarbeitung/Speicherung:**
 * kcal der Rezepte zusammenrechnen, die zu den Fastentagen hinzugefügt worden sind
 * Summe formatiert anzeigen
 * neues Rezept abspeichern und formatieren
-* Gewichtangabe speichern (ooptional)
   
 **Datenausgabe:**
-* tägliche Kalorienbilanz anzeigen (wöchentlich und monatlich optional) 
-* Gewichtverlauf (optional)
-* Rezepte ausdrucken (optional)
-* Liste der Lieblingsrezepte anzeigen (optional)
+* tägliche Kalorienbilanz anzeigen
+* Rezept-Liste anzeigen
+
+![Bild 2](Ablaufdiagramm.png)
 
