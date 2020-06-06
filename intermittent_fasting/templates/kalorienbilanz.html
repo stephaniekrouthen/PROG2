@@ -34,9 +34,10 @@
         </form>
         <p>{{ bestätigung_mahlzeit }}</p>
         <p>{{ fehler_meldung }}</p>
-        <h1>Deine persönliche Kalorienbilanz von heute</h1>
+        <h1>{{ username }}, deine persönliche Kalorienbilanz von heute</h1>
         {{ kcal_verbraucht_str }}<br>
         {{ kcal_verfuegbar_str }}<br>
-        {{ kcal_ueberschritten }}<br><br>    
+        {{ kcal_ueberschritten }}<br><br>
+        {{ viz_div|safe }}    
     <p/>
 </div>
